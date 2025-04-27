@@ -65,15 +65,16 @@ API Endpoints
     DELETE /:id: Delete a workout by ID.
     PATCH /:id: Update a workout by ID.
     
-Project Structure
-Backend on master branch:
+**Project Structure:**
+
+backend(master branch)
 
     server.js: Entry point for the backend server.
     routes/workouts.js: Defines API routes for workouts.
     controllers/workoutController.js: Handles business logic for workouts.
     models/workoutModel.js: Mongoose schema for workouts.
     
-Frontend on master branchs:
+frontend(master branch):
 
     src/App.js: Main React component.
     src/pages/Home.js: Home page displaying workouts.
@@ -85,6 +86,7 @@ If you encounter the error:
      Proxy error: Could not proxy request /api/workouts/ from localhost:3000 to http://localhost:4000/ (ECONNREFUSED).
 
 Ensure the backend server is running on port 4000.
+
 Verify the proxy field in **{}package.json**: "proxy": "http://localhost:4000"
 
 
@@ -92,8 +94,10 @@ Ensure your MongoDB instance is running or your Atlas cluster is accessible.
 Whitelist your IP address in the MongoDB Atlas dashboard.
 
 
-Author
+Author: 
+
 Tanvir Mahtab
+
 mhtbtanvir@gmail.com
 
 
