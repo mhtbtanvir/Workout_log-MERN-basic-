@@ -31,6 +31,74 @@ Before running the project, ensure you have the following installed:
 ## Installation
 
 1. Clone the repository:
+   
    ```bash
    https://github.com/mhtbtanvir/Workout_log-MERN-basic-/
    cd Workout_log-MERN-basic-
+   cd backend
+   npm install
+   cd ../frontend
+   npm install
+2.Configuration
+Create a .env file in the backend directory and add the following:
+
+      MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>? 
+      retryWrites=true&w=majority
+      PORT=4000
+3.Running the Application
+  Start the backend and frontend server:
+
+    cd backend
+    npm run dev
+    cd ../frontend
+    npm start
+  Then Open Browser and navigate to 
+  
+    http://localhost:3000
+
+API Endpoints
+
+    Base URL: http://localhost:4000/api/workouts
+    GET /: Fetch all workouts.
+    GET /:id: Fetch a single workout by ID.
+    POST /: Create a new workout.
+    DELETE /:id: Delete a workout by ID.
+    PATCH /:id: Update a workout by ID.
+    
+Project Structure
+Backend (backend):
+
+    server.js: Entry point for the backend server.
+    routes/workouts.js: Defines API routes for workouts.
+    controllers/workoutController.js: Handles business logic for workouts.
+    models/workoutModel.js: Mongoose schema for workouts.
+    
+Frontend (frontend):
+
+    src/App.js: Main React component.
+    src/pages/Home.js: Home page displaying workouts.
+    src/components/Navbar.js: Navigation bar.
+Troubleshooting
+Proxy Error
+If you encounter the error:
+
+     Proxy error: Could not proxy request /api/workouts/ from localhost:3000 to http://localhost:4000/ (ECONNREFUSED).
+
+Ensure the backend server is running on port 4000.
+Verify the proxy field in **{}package.json**: "proxy": "http://localhost:4000"
+
+
+Ensure your MongoDB instance is running or your Atlas cluster is accessible.
+Whitelist your IP address in the MongoDB Atlas dashboard.
+
+
+Author
+Tanvir Mahtab
+mhtbtanvir@gmail.com
+
+
+
+    
+      
+
+  
