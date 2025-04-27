@@ -66,14 +66,14 @@ API Endpoints
     PATCH /:id: Update a workout by ID.
     
 Project Structure
-Backend (backend):
+Backend on master branch:
 
     server.js: Entry point for the backend server.
     routes/workouts.js: Defines API routes for workouts.
     controllers/workoutController.js: Handles business logic for workouts.
     models/workoutModel.js: Mongoose schema for workouts.
     
-Frontend (frontend):
+Frontend on master branchs:
 
     src/App.js: Main React component.
     src/pages/Home.js: Home page displaying workouts.
